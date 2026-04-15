@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #ffffff;
+  --color-on-surface: #191c1d;
+  --color-primary-orange: #ff5733;
+  --color-primary-dark: #ec4a27;
+  --color-secondary-container: #5b617d;
+  --color-surface-container-low: #f3f4f5;
+  --color-outline-variant: rgba(198, 198, 206, 0.2);
+
+  --font-inter: "Inter", sans-serif;
+
+  --radius-none: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-full: 0;
+
+  --letter-spacing-display: -0.04em;
+  --letter-spacing-label: 0.05em;
+
+  --animate-snappy: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #191c1d;
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-inter);
+  letter-spacing: var(--letter-spacing-display);
+}
+
+.display-lg {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: var(--letter-spacing-display);
+}
+
+.headline-md {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.body-lg {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.label-md {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-label);
+}
+
+.cta-gradient {
+  background: linear-gradient(to bottom right, #ff5733, #ec4a27);
+  transition: all 200ms var(--animate-snappy);
+}
+
+.cta-gradient:hover {
+  filter: brightness(0.9);
+}
